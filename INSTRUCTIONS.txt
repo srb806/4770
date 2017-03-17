@@ -1,0 +1,24 @@
+Basic getting started instructions for MunSN
+
+1. Get mongodb and node.js (node --version v4.6.1, mongod -- version v3.2.11)
+	-Probably need to use npm or something similar to get the right node version
+
+2. Get basic node requirements: yo, grunt-cli, bower, generator-angular and generator-karma
+	-If using npm the command is something like npm install -g yo grunt-cli..... etc
+
+3. Run mongodb (the database not the shell). For linux this means starting the service. It varies otherwise.
+
+4. Clone the git repo if you havent already
+
+5. Install the requirements from the git repo(using npm or what-have-you)
+
+6. You should now be good to go if I havent missed anything. "grunt serve" will get the site going and let you
+   visit it in your browser.
+
+notes:
+	- yo is short for yeoman, its a scalfolding tool. Were using https://github.com/yeoman/generator-angular
+	  Use yo when creating new controllers, views and such. It'll do most of the setup for you, see github.
+
+	- grunt-cli is a command line tool for serving the website. It does some useful stuff like
+	  handling your file changes so that you can see them immediately in the browser. "grunt serve" gets you
+	  a running environment
