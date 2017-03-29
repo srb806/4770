@@ -4,13 +4,13 @@ Basic getting started instructions for MunSN
 	-Probably need to use npm or something similar to get the right node version
 
 2. Get basic node requirements: yo, grunt-cli, bower, generator-angular and generator-karma
-	-If using npm the command is something like npm install -g yo grunt-cli..... etc
+	-If using npm the command is something like "npm install -g yo grunt-cli bower... etc"
 
 3. Run mongodb (the database not the shell). For linux this means starting the service. It varies otherwise.
 
 4. Clone the git repo if you havent already
 
-5. Install the requirements from the git repo(using npm or what-have-you)
+5. Install the requirements from the git repo(using "npm install" or what-have-you)
 
 6. You should now be good to go if I havent missed anything. "grunt serve" will get the site going and let you
    visit it in your browser.
@@ -19,6 +19,34 @@ notes:
 	- yo is short for yeoman, its a scalfolding tool. Were using https://github.com/yeoman/generator-angular
 	  Use yo when creating new controllers, views and such. It'll do most of the setup for you, see github.
 
-	- grunt-cli is a command line tool for serving the website. It does some useful stuff like
-	  handling your file changes so that you can see them immediately in the browser. "grunt serve" gets you
-	  a running environment
+	- grunt-cli is a command line tool for serving the website. It does some useful stuff like automatically
+	  running tests and handling your test server. Again, the command "grunt serve" gets you
+	  a running test environment.
+
+	- I tried to make all the necessary controllers and views before hand. They're named obviously except
+	  main is the timeline as its the default page once logged in and landing is to be a page you see
+	  before you log in / create an account.
+
+	- The command "yo angular:route NAME --uri=URLENDING" creates a route, controller and view with the
+	  given name and address.
+
+	- Tests should be written in the "test/spec/controllers/WHAT-I'M-TESTING.js" file. Its already got the
+	  basic setup from yeoman so you'll mostly have to simply write basic tests and maybe some code to add
+	  data to test beforehand. I posted a tutorial in the discord, though you'll need to skip to the writing
+	  tests part since the setups handled.
+
+	- ".editorconfig" is a file that syncs some basic project settings accross everyone's prefered IDE / editor.
+	  Its optional but you might want to quickly check editorconfig.org to see if your editor needs a plugin to
+	  support it.
+
+	- "index.html" is the base site template, it contains the header, footer and some wrapper content like the
+	  nav-bar. Individual views get dropped inside where it says "<div ng-view=""></div>"
+
+
+
+resources:
+    - Karma. The testing tool created by the team who made angular.
+	  testing documentation: https://karma-runner.github.io/1.0/index.html
+
+	- Yeoman. A scaffolding tool that uses generators for quick setups.
+	  The generator were using: https://github.com/yeoman/generator-angular
